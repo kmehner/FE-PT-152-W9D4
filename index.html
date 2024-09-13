@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Forms</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="m-3">
+    <header>
+      <!-- place navbar here -->
+    </header>
+    <main>
+
+      <!-- needs-validation -> bootstrap feedback for errors -->
+      <!-- novalidate - disables browser form validation -->
+      <form class="needs-validation" novalidate>
+
+        <div class="container my-4 bg-light p-3 rounded">
+          <div class="row">
+            <div class="col-lg-5">
+              <h2 class="mb-4">Form!</h2>
+
+              <div class="input-group">
+                <span class="input-group-text">Full Name</span>
+                <!-- <label for="fullName" class="form-label">Full Name</label> -->
+                <input aria-describedby="Full name input" class="form-control" id="fullName" required>
+              </div>
+              <!-- Form feedback -->
+              <div class="invalid-feedback">Full name is required!</div>
+              <div class="valid-feedback">Thank you for obeying</div>
+
+              <!-- Select -->
+              <div class="mb-4">
+                <div class="input-group">
+                  <!-- <label for="questSelect" class="form-label">Quest:</label> -->
+                  <span class="input-group-text">Quest</span>
+
+                  <!-- Select input -->
+                  <select class="form-select" aria-label="Quest Select" id="questSelect" required>
+                    <!-- Placeholder -->
+                    <option selected disabled hidden value="">What is your quest?</option>
+                    <!-- Options -->
+                    <option value="grail">To seek the holy grail</option>
+                    <option value="nothing">Nothing else matters</option>
+                    <option value="me">Don't pick me</option>
+                  </select>
+                </div>
+                <div class="invalid-feedback">
+                  Please select a quest, it's critical
+                </div>
+              </div>
+
+              <!-- Radio buttons -->
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="montyPython"
+                  id="montyAmazing" checked required>
+                <label class="form-check-label" for="montyAmazing">
+                  Monty Python is Amazing
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="montyPython"
+                  id="montyGreat">
+                <label class="form-check-label" for="montyGreat">
+                  Monty Python is Great
+                </label>
+              </div>
+              
+            </div>
+
+            <div class="col-lg-7 mt-3">
+              <div class="input-group">
+                <span class="input-group-text">username@example.com</span>
+                <input type="email" class="form-control" id="userEmail"
+                  placeholder="Enter email" aria-describedby="email input" required>
+
+                <!-- Invalid feedback -->
+                <div class="invalid-feedback">
+                  We need your email to track err help you out!
+                </div>
+              </div>
+
+              <!-- Text below input -->
+              <div id="emailHelp" class="form-text text-muted m-2">
+                We'll never share your email to anyone unless we get a lot of money
+              </div>
+
+              <!-- Floating labels -->
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="userPassword"
+                  placeholder="password" required>
+                <label for="userPassword">Password!!</label>
+                <div class="invalid-feedback">
+                  Password is required!
+              </div>
+
+              <!-- Checkbox -->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value=""
+                  id="signLife" required>
+                <label class="form-check-label" for="signLife">
+                  Sign your life away?
+                </label>
+                <div class="invalid-feedback">
+                  We need your life, sign away
+                </div>
+              </div>
+
+              <button class="btn btn-primary mt-3" type="submit">Submit Form</button>
+            </div>
+            
+          </div>
+        </div>
+
+      </form> 
+
+
+
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+  
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+  
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+          .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+  
+              form.classList.add('was-validated');
+            }, false);
+          });
+      })()
+    </script>
+  </body>
+</html>
